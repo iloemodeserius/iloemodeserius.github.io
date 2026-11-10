@@ -1,455 +1,197 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description" content="Iloo — Student, Creative Developer, Linux Enthusiast, and DevOps Explorer.">
-
-    <meta name="theme-color" content="#171717">
-
-    <title>Iloo — Creative Developer</title>
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
-
-    <!-- GOOGLE FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Iloo — Student, Creative Developer, Linux Enthusiast, and DevOps Explorer.">
+<meta name="theme-color" content="#10101D">
+<title>Iloo — Creative Developer</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-    <!-- =========================
-         NAVIGATION
-    ========================== -->
+<noscript><style>#boot{display:none}</style></noscript>
+<div id="boot" aria-hidden="true"><pre id="bootlog"></pre><span class="bootskip">KLIK / TEKAN TOMBOL APA SAJA UNTUK SKIP ↵</span></div>
 
-    <nav class="navbar">
+<!-- Filter untuk efek cat semprot di judul -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <filter id="rough"><feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="3" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="7"/></filter>
+</svg>
 
-        <a href="#home" class="logo">
-            iloo<span>.</span>
-        </a>
+<nav class="navbar">
+  <a href="#home" class="logo">iloo<span>.</span></a>
+  <div class="nav-links">
+    <a href="#home">Home</a><a href="#about">About</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+  </div>
+  <div class="nav-tag">CREATIVE DEVELOPER ✳</div>
+</nav>
 
-        <div class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </div>
+<main>
 
-        <div class="nav-tag">
-            CREATIVE DEVELOPER ✳
-        </div>
+<!-- HERO -->
+<section class="hero" id="home">
+  <canvas id="wall"></canvas>
+  <div class="planet"></div>
+  <div class="ring"></div>
+  <div class="moon"></div>
+  <span class="fl" style="top:12%;left:52%;--d:6s">🛸</span>
+  <span class="fl" style="top:62%;left:44%;--d:7s">👾</span>
+  <span class="fl" style="top:8%;left:30%;--d:5s">✨</span>
+  <span class="fl" style="top:78%;left:62%;--d:8s">🚀</span>
 
-    </nav>
+  <svg class="astro" viewBox="0 0 270 250" aria-hidden="true">
+    <rect x="42" y="78" width="42" height="82" rx="10" fill="#9B6DFF" stroke="#10101D" stroke-width="5"/>
+    <rect x="76" y="168" width="28" height="52" rx="13" fill="#fff" stroke="#10101D" stroke-width="5"/><rect x="110" y="168" width="28" height="52" rx="13" fill="#fff" stroke="#10101D" stroke-width="5"/>
+    <rect x="72" y="208" width="36" height="22" rx="9" fill="#FF36A6" stroke="#10101D" stroke-width="5"/><rect x="108" y="208" width="36" height="22" rx="9" fill="#FF36A6" stroke="#10101D" stroke-width="5"/>
+    <rect x="68" y="90" width="76" height="92" rx="28" fill="#fff" stroke="#10101D" stroke-width="5"/>
+    <rect x="86" y="112" width="40" height="22" rx="5" fill="#FFE500" stroke="#10101D" stroke-width="3"/>
+    <path d="M138 110 Q178 118 186 86" stroke="#10101D" stroke-width="28" stroke-linecap="round" fill="none"/><path d="M138 110 Q178 118 186 86" stroke="#fff" stroke-width="17" stroke-linecap="round" fill="none"/>
+    <rect x="172" y="46" width="26" height="46" rx="5" fill="#FF36A6" stroke="#10101D" stroke-width="4"/><rect x="178" y="36" width="14" height="12" fill="#FFE500" stroke="#10101D" stroke-width="3"/>
+    <g class="mist"><circle cx="212" cy="30" r="10" fill="#FFE500" opacity=".85"/><circle cx="232" cy="20" r="14" fill="#65D9FF" opacity=".7"/><circle cx="252" cy="34" r="9" fill="#FF36A6" opacity=".8"/></g>
+    <circle cx="108" cy="62" r="46" fill="#fff" stroke="#10101D" stroke-width="5"/>
+    <ellipse cx="116" cy="64" rx="31" ry="24" fill="#171326" stroke="#10101D" stroke-width="3"/><ellipse cx="108" cy="56" rx="10" ry="5" fill="#65D9FF" opacity=".7" transform="rotate(-20 108 56)"/>
+  </svg>
 
+  <div class="hero-inner">
+    <p class="eyebrow">✳ HELLO WORLD! — WELCOME TO MY SPACE.</p>
 
-    <main>
+    <h1 class="big" aria-label="ILOO">ILOO<i class="drip" style="left:9%;--h:95px;animation-delay:.6s"></i><i class="drip" style="left:33%;--h:60px;animation-delay:1.1s"></i><i class="drip" style="left:58%;--h:120px;animation-delay:.9s"></i><i class="drip" style="left:84%;--h:75px;animation-delay:1.5s"></i></h1>
 
-        <!-- =========================
-             HERO SECTION
-        ========================== -->
-
-        <section class="hero" id="home">
-
-            <div class="hero-content">
-
-                <p class="eyebrow">
-                    ✳ HELLO WORLD! — WELCOME TO MY SPACE.
-                </p>
-
-                <h1>
-                    I'M<br>
-                    <span class="pink-text">ILOO.</span><br>
-                    STUDENT.<br>
-                    <span class="yellow-text">DEVELOPER.</span>
-                </h1>
-
-                <p class="identity-tagline">
-                    LINUX ENTHUSIAST ✳ DEVOPS EXPLORER
-                </p>
-
-                <p class="hero-description">
-
-                    Curious mind, creative thinker,
-                    and aspiring developer.
-
-                    <br><br>
-
-                    Exploring Linux, programming,
-                    web development, and the endless
-                    possibilities of technology.
-
-                    <br><br>
-
-                    Learning by doing.
-                    Building by experimenting.
-
-                </p>
-
-
-                <!-- BUTTONS -->
-
-                <div class="hero-buttons">
-
-                    <a href="#projects" class="btn-primary">
-                        EXPLORE MY WORK ↗
-                    </a>
-
-                    <a
-                        href="https://github.com/iloemodeserius"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn-secondary"
-                    >
-                        GITHUB ↗
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <!-- HERO DECORATION -->
-
-           
-<!-- HERO DECORATION -->
-
-<div class="hero-decoration">
-
-    <!-- SATURN PLANET -->
-    <div class="cosmic-planet saturn">
-        <div class="saturn-ring"></div>
-        <div class="saturn-body"></div>
+    <div>
+      <span class="stk" style="--c:var(--yellow);--r:-3deg">STUDENT ✳</span>
+      <span class="stk" style="--r:2deg">DEVELOPER ✳</span>
+      <span class="stk" style="--c:var(--pink);--r:-1deg">LINUX ✳</span>
+      <span class="stk" style="--c:#fff;--r:3deg">DEVOPS ✳</span>
     </div>
 
-    <!-- SMALL BLUE PLANET -->
-    <div class="cosmic-planet blue-planet"></div>
+    <div class="terminal"><span class="prompt">iloo@orbit:~$</span><span id="typed"></span><span class="caret">▍</span></div>
 
-    <!-- ORBIT -->
-    <div class="cosmic-orbit"></div>
-
-    <!-- EXISTING GRAFFITI ELEMENTS -->
-    <div class="sticker sticker-one">
-        KEEP<br>
-        BUILDING!
+    <div class="btns">
+      <a href="#projects" class="btn-primary">EXPLORE MY WORK ↓</a>
+      <a href="https://github.com/iloemodeserius" target="_blank" rel="noopener noreferrer" class="btn-secondary">GITHUB ↗</a>
     </div>
+  </div>
 
-    <div class="sticker sticker-two">
-        0101
+  <div class="pal">
+    <span>SPRAY THE WALL — TAHAN &amp; GESER MOUSE</span>
+    <b class="on" style="--c:#FF36A6" data-c="#FF36A6"></b>
+    <b style="--c:#FFE500" data-c="#FFE500"></b>
+    <b style="--c:#65D9FF" data-c="#65D9FF"></b>
+    <b style="--c:#9B6DFF" data-c="#9B6DFF"></b>
+    <button id="clr" type="button">CLEAR</button>
+  </div>
+</section>
+
+<div class="tape" aria-hidden="true"><div class="track">
+  <span>SPACE ✳ STREET ART ✳ CODE ✳ LINUX ✳ KEEP BUILDING ✳ SPACE ✳ STREET ART ✳ CODE ✳ LINUX ✳ KEEP BUILDING ✳ SPACE ✳ STREET ART ✳ CODE ✳ LINUX ✳ KEEP BUILDING ✳ </span>
+  <span>SPACE ✳ STREET ART ✳ CODE ✳ LINUX ✳ KEEP BUILDING ✳ SPACE ✳ STREET ART ✳ CODE ✳ LINUX ✳ KEEP BUILDING ✳ SPACE ✳ STREET ART ✳ CODE ✳ LINUX ✳ KEEP BUILDING ✳ </span>
+</div></div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <span class="bgword" aria-hidden="true">ABOUT</span>
+  <div class="about-grid">
+    <div>
+      <p class="label">01 — ABOUT ME</p>
+      <h2>NOT JUST<br><span class="pink-text">CODE.</span><br><span class="sq">IT’S A CREATIVE PROCESS.</span></h2>
+      <p class="txt">Hi! I’m Iloo. Saya seorang pelajar yang tertarik dengan dunia teknologi dan pengembangan software.</p>
+      <p class="txt">Saya senang mengeksplorasi Linux, mempelajari programming, membangun website, dan mencoba berbagai eksperimen teknologi.</p>
+      <p class="txt">Bagi saya, setiap kesalahan adalah bagian dari proses belajar dan setiap project adalah kesempatan untuk berkembang.</p>
+      <p class="txt"><strong>Stay curious. Keep learning. Keep building.</strong></p>
+      <div class="tags"><span>LINUX</span><span>JAVA</span><span>JAVASCRIPT</span><span>HTML</span><span>CSS</span><span>GIT</span><span>NODE.JS</span></div>
     </div>
-
-    <div class="star-decoration">
-        ✳
+    <div class="stats">
+      <div class="stat" style="--c:var(--yellow);--r:-2deg"><b>03</b><span>PROJECTS & COUNTING</span></div>
+      <div class="stat" style="--c:var(--blue);--r:1.5deg"><b>∞</b><span>CURIOSITY LEVEL</span></div>
+      <div class="stat" style="--c:var(--pink);--r:-1deg"><b>24/7</b><span>LEARNING MODE</span></div>
     </div>
-
-    <div class="circle-decoration"></div>
-
-    <p class="side-note">
-        DESIGNED TO EXPLORE.
-        <br>
-        BUILT TO CREATE.
-    </p>
-
-</div>
-
-
-
-            <div class="hero-index">
-
-                <span>01 / 04</span>
-
-                <span>
-                    SCROLL TO EXPLORE ↓
-                </span>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =========================
-             ABOUT SECTION
-        ========================== -->
-
-        <section class="about" id="about">
-
-            <p class="section-label">
-                01 — ABOUT ME
-            </p>
-
-            <h2>
-                NOT JUST<br>
-                <span class="pink-text">CODE.</span>
-                IT'S A<br>
-                CREATIVE PROCESS.
-            </h2>
-
-            <p>
-
-                Hi! I'm Iloo.
-
-                Saya seorang pelajar yang tertarik
-                dengan dunia teknologi dan
-                pengembangan software.
-
-                <br><br>
-
-                Saya senang mengeksplorasi Linux,
-                mempelajari programming, membangun
-                website, dan mencoba berbagai
-                eksperimen teknologi.
-
-                <br><br>
-
-                Bagi saya, setiap kesalahan adalah
-                bagian dari proses belajar dan
-                setiap project adalah kesempatan
-                untuk berkembang.
-
-                <br><br>
-
-                <strong>
-                    Stay curious. Keep learning. Keep building.
-                </strong>
-
-            </p>
-
-
-            <!-- TECH STACK -->
-
-            <div class="project-tags">
-
-                <span>LINUX</span>
-                <span>JAVA</span>
-                <span>JAVASCRIPT</span>
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>GIT</span>
-                <span>NODE.JS</span>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =========================
-             PROJECTS SECTION
-        ========================== -->
-
-        <section class="projects" id="projects">
-
-            <p class="section-label">
-                02 — SELECTED WORK
-            </p>
-
-            <h2>
-                MY <span class="yellow-text">PROJECTS.</span>
-            </h2>
-
-
-            <div class="project-grid">
-
-
-                <!-- PROJECT 01 -->
-
-                <article class="project-card">
-
-                    <span class="project-number">
-                        01 / LINUX
-                    </span>
-
-                    <div class="project-icon">
-                        ⌘
-                    </div>
-
-                    <h3>
-                        LINUX LAB.
-                    </h3>
-
-                    <p>
-
-                        Exploring Linux systems,
-                        file permissions, system services,
-                        terminal commands, and
-                        command-line environments.
-
-                    </p>
-
-                    <div class="project-tags">
-
-                        <span>LINUX</span>
-                        <span>BASH</span>
-                        <span>CLI</span>
-
-                    </div>
-
-                    <span class="project-status">
-                        LEARNING PROJECT ✳
-                    </span>
-
-                </article>
-
-
-
-                <!-- PROJECT 02 -->
-
-                <article class="project-card">
-
-                    <span class="project-number">
-                        02 / REAL-TIME
-                    </span>
-
-                    <div class="project-icon">
-                        ⌁
-                    </div>
-
-                    <h3>
-                        WEBSOCKET CHAT.
-                    </h3>
-
-                    <p>
-
-                        A real-time messaging experiment
-                        built with JavaScript and Node.js.
-                        Exploring connections and
-                        real-time communication.
-
-                    </p>
-
-                    <div class="project-tags">
-
-                        <span>NODE.JS</span>
-                        <span>WEBSOCKET</span>
-                        <span>JAVASCRIPT</span>
-
-                    </div>
-
-                    <span class="project-status">
-                        EXPERIMENT ✳
-                    </span>
-
-                </article>
-
-
-
-                <!-- PROJECT 03 -->
-
-                <article class="project-card">
-
-                    <span class="project-number">
-                        03 / COMMUNICATION
-                    </span>
-
-                    <div class="project-icon">
-                        ◎
-                    </div>
-
-                    <h3>
-                        WEBRTC EXPERIMENT.
-                    </h3>
-
-                    <p>
-
-                        Exploring peer-to-peer communication,
-                        WebRTC technology, and signaling
-                        using Node.js.
-
-                    </p>
-
-                    <div class="project-tags">
-
-                        <span>WEBRTC</span>
-                        <span>NODE.JS</span>
-                        <span>HTTPS</span>
-
-                    </div>
-
-                    <span class="project-status">
-                        IN PROGRESS ✳
-                    </span>
-
-                </article>
-
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =========================
-             CONTACT SECTION
-        ========================== -->
-
-        <section class="contact" id="contact">
-
-            <p class="section-label">
-                03 — GET IN TOUCH
-            </p>
-
-            <h2>
-
-                LET'S MAKE<br>
-                SOMETHING
-                <span class="pink-text">COOL.</span>
-
-            </h2>
-
-            <p>
-
-                Interested in technology,
-                creative projects, or just
-                want to connect?
-
-                <br>
-
-                Find me on GitHub!
-
-            </p>
-
-
-            <a
-                href="https://github.com/iloemodeserius"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn-primary"
-            >
-                FIND ME ON GITHUB ↗
-            </a>
-
-        </section>
-
-    </main>
-
-
-
-    <!-- =========================
-         FOOTER
-    ========================== -->
-
-    <footer>
-
-        <p>
-            © 2026 ILOO. MADE WITH CURIOSITY.
-        </p>
-
-        <p>
-            KEEP LEARNING. KEEP BUILDING. ✳
-        </p>
-
-    </footer>
-
-
-
-    <!-- JAVASCRIPT -->
-
-    <script src="script.js"></script>
-
+  </div>
+</section>
+
+<div class="tape rev" aria-hidden="true"><div class="track">
+  <span>HELLO WORLD ✳ SUDO EXPLORE ✳ NODE.JS ✳ WEBRTC ✳ GIT PUSH ✳ HELLO WORLD ✳ SUDO EXPLORE ✳ NODE.JS ✳ WEBRTC ✳ GIT PUSH ✳ HELLO WORLD ✳ SUDO EXPLORE ✳ NODE.JS ✳ WEBRTC ✳ GIT PUSH ✳ </span>
+  <span>HELLO WORLD ✳ SUDO EXPLORE ✳ NODE.JS ✳ WEBRTC ✳ GIT PUSH ✳ HELLO WORLD ✳ SUDO EXPLORE ✳ NODE.JS ✳ WEBRTC ✳ GIT PUSH ✳ HELLO WORLD ✳ SUDO EXPLORE ✳ NODE.JS ✳ WEBRTC ✳ GIT PUSH ✳ </span>
+</div></div>
+
+<!-- PROJECTS -->
+<section class="projects" id="projects">
+  <span class="bgword" aria-hidden="true">BUILD</span>
+  <p class="label">02 — SELECTED WORK</p>
+  <h2>MY <span class="yellow-text">PROJECTS.</span></h2>
+
+  <div class="grid">
+    <article class="card">
+      <small>01 / LINUX</small><div class="ic">⌘</div>
+      <h3>LINUX LAB.</h3>
+      <p>Exploring Linux systems, file permissions, system services, terminal commands, and command-line environments.</p>
+      <div class="ptags"><span>LINUX</span><span>BASH</span><span>CLI</span></div>
+      <div class="pfoot"><span>LEARNING PROJECT ✳</span><a href="https://github.com/iloemodeserius" target="_blank" rel="noopener noreferrer">CODE ↗</a></div>
+    </article>
+
+    <article class="card">
+      <small>02 / REAL-TIME</small><div class="ic">⌁</div>
+      <h3>WEBSOCKET CHAT.</h3>
+      <p>A real-time messaging experiment built with JavaScript and Node.js. Exploring connections and real-time communication.</p>
+      <div class="ptags"><span>NODE.JS</span><span>WEBSOCKET</span><span>JAVASCRIPT</span></div>
+      <div class="pfoot"><span>EXPERIMENT ✳</span><a href="https://github.com/iloemodeserius" target="_blank" rel="noopener noreferrer">CODE ↗</a></div>
+    </article>
+
+    <article class="card">
+      <small>03 / COMMUNICATION</small><div class="ic">◎</div>
+      <h3>WEBRTC EXPERIMENT.</h3>
+      <p>Exploring peer-to-peer communication, WebRTC technology, and signaling using Node.js.</p>
+      <div class="ptags"><span>WEBRTC</span><span>NODE.JS</span><span>HTTPS</span></div>
+      <div class="pfoot"><span>IN PROGRESS ✳</span><a href="https://github.com/iloemodeserius" target="_blank" rel="noopener noreferrer">CODE ↗</a></div>
+    </article>
+  </div>
+</section>
+
+<!-- LEARNING LOG -->
+<section class="journey" id="journey">
+  <span class="bgword" aria-hidden="true">LAUNCH</span>
+  <p class="label">03 — LEARNING LOG</p>
+  <h2>MY <span class="sq">FLIGHT PATH.</span></h2>
+  <div class="path">
+    <div class="step" style="--c:var(--pink)"><div class="dot">01</div><div><h3>LINUX</h3><p>Mulai dari terminal, file permission, dan system services.</p></div></div>
+    <div class="step" style="--c:var(--yellow)"><div class="dot">02</div><div><h3>JAVASCRIPT</h3><p>Belajar bikin website yang interaktif: HTML, CSS, dan JS.</p></div></div>
+    <div class="step" style="--c:var(--blue)"><div class="dot">03</div><div><h3>NODE.JS</h3><p>Pindah ke sisi server dan mulai bikin tools sendiri.</p></div></div>
+    <div class="step" style="--c:var(--purple)"><div class="dot">04</div><div><h3>WEBSOCKET</h3><p>Eksperimen komunikasi real-time lewat aplikasi chat.</p></div></div>
+    <div class="step" style="--c:var(--pink)"><div class="dot">05</div><div><h3>WEBRTC ✳</h3><p>Sekarang: peer-to-peer dan signaling. Masih terus belajar.</p></div></div>
+  </div>
+</section>
+
+<!-- TERMINAL -->
+<section class="shell-sec" id="terminal">
+  <p class="label">04 — TRY IT</p>
+  <h2>TALK TO MY <span class="yellow-text">TERMINAL.</span></h2>
+  <div class="shell" id="shell">
+    <div class="shell-bar"><i></i><i></i><i></i><span>iloo@orbit: ~</span></div>
+    <div class="shell-out" id="out" aria-live="polite"></div>
+    <form class="shell-in" id="cmdform">
+      <span class="prompt">$</span>
+      <input id="cmd" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="ketik 'help' lalu Enter" aria-label="Terminal input">
+    </form>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <p class="label">05 — GET IN TOUCH</p>
+  <h2>LET’S MAKE<br>SOMETHING <span class="pink-text">COOL.</span></h2>
+  <p>Interested in technology, creative projects, or just want to connect?<br>Find me on GitHub!</p>
+  <a href="https://github.com/iloemodeserius" target="_blank" rel="noopener noreferrer" class="btn-primary">FIND ME ON GITHUB ↗</a>
+</section>
+
+</main>
+
+<footer>
+  <p>© 2026 ILOO. MADE WITH CURIOSITY.</p>
+  <p>KEEP LEARNING. KEEP BUILDING. ✳</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
