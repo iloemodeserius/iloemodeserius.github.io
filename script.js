@@ -162,9 +162,12 @@ document.addEventListener("DOMContentLoaded", () => {
         fit();
         window.addEventListener("resize", fit);
 
-        // Hanya mouse/pen, supaya scroll di HP tetap normal
+        // Di HP, coret hanya aktif kalau SPRAY MODE dinyalakan (supaya scroll tetap normal)
+        let sprayOn = false;
+
         hero.addEventListener("pointerdown", (e) => {
-            if (e.pointerType === "touch" || e.target.closest("a, button, b")) return;
+            if (e.pointerType === "touch" && !sprayOn) return;
+            if (e.target.closest("a, button, b")) return;
             drawing = true;
             last = pos(e);
             dot(last);
@@ -178,6 +181,23 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         window.addEventListener("pointerup", () => { drawing = false; });
+        window.addEventListener("pointercancel", () => { drawing = false; });
+
+        const modeBtn = document.getElementById("mode");
+        const hint = document.getElementById("palhint");
+
+        if (window.matchMedia("(hover: none)").matches && hint) {
+            hint.textContent = "SPRAY THE WALL — NYALAKAN MODE, LALU GESER JARI";
+        }
+
+        if (modeBtn) {
+            modeBtn.addEventListener("click", () => {
+                sprayOn = !sprayOn;
+                hero.classList.toggle("spray-on", sprayOn);
+                modeBtn.classList.toggle("on", sprayOn);
+                modeBtn.textContent = sprayOn ? "✎ SPRAY MODE: ON" : "✎ SPRAY MODE: OFF";
+            });
+        }
 
         const swatches = document.querySelectorAll(".pal b");
         swatches.forEach(b => {
@@ -308,3 +328,143 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("%c Keep learning. Keep building.", "color: #ffe500; font-size: 14px;");
 
 });
+
+/* =========================================
+   ILOO — ORBIT TERMINAL ENGINE
+========================================= */
+
+(() => {
+    const form = document.getElementById("orbitForm");
+    const input = document.getElementById("orbitCommand");
+    const output = document.getElementById("orbitOutput");
+
+    if (!form || !input || !output) return;
+
+    const commands = {
+
+        help: () => [
+            ["Available Commands", "yellow"],
+            ["------------------------------", "muted"],
+            ["help       - Show all commands", "normal"],
+            ["about      - About Iloo", "normal"],
+            ["skills     - Explore technologies", "normal"],
+            ["projects   - View my projects", "normal"],
+            ["learning   - My learning journey", "normal"],
+            ["contact    - Find my GitHub", "normal"],
+            ["whoami     - Who am I?", "normal"],
+            ["clear      - Clear terminal", "normal"],
+            ["date       - Current date", "normal"]
+        ],
+
+        about: () => [
+            ["HELLO! I'M ILOO.", "pink"],
+            ["Student and creative developer.", "normal"],
+            ["I enjoy exploring technology,", "normal"],
+            ["building projects, and learning", "normal"],
+            ["how things work behind the scenes.", "normal"]
+        ],
+
+        skills: () => [
+            ["TECHNOLOGY EXPLORATION", "yellow"],
+            ["Linux / Bash / System Administration", "normal"],
+            ["Java / JavaScript", "normal"],
+            ["HTML / CSS / Responsive Design", "normal"],
+            ["Node.js / WebSocket / WebRTC", "normal"],
+            ["Git / GitHub / QEMU / Nginx", "normal"],
+            ["Cloudflare / HTTPS", "normal"]
+        ],
+
+        projects: () => [
+            ["SELECTED PROJECTS", "pink"],
+            ["01. Linux Lab", "normal"],
+            ["02. WebSocket Chat", "normal"],
+            ["03. WebRTC Video Call", "normal"],
+            ["Explore more at:", "normal"],
+            ["github.com/iloemodeserius", "blue"]
+        ],
+
+        learning: () => [
+            ["MY LEARNING FLIGHT PATH", "yellow"],
+            ["01. Linux & System Administration", "normal"],
+            ["02. Virtualization & Server", "normal"],
+            ["03. Programming & Algorithms", "normal"],
+            ["04. Web Development", "normal"],
+            ["05. Networking & Real-Time", "normal"],
+            ["06. Development Tools", "normal"],
+            ["Always learning. Always building.", "pink"]
+        ],
+
+        contact: () => [
+            ["LET'S CONNECT!", "pink"],
+            ["GitHub: github.com/iloemodeserius", "blue"]
+        ],
+
+        whoami: () => [
+            ["iloo@orbit", "yellow"],
+            ["A curious student exploring", "normal"],
+            ["the world of software and technology.", "normal"]
+        ],
+
+        date: () => [
+            [new Date().toLocaleString("id-ID"), "blue"]
+        ]
+    };
+
+    function printLine(text, type = "normal") {
+        const line = document.createElement("p");
+        line.textContent = text;
+
+        const styles = {
+            yellow: "terminal-yellow",
+            pink: "terminal-pink",
+            blue: "terminal-blue",
+            muted: "terminal-muted",
+            normal: ""
+        };
+
+        if (styles[type]) {
+            line.className = styles[type];
+        }
+
+        output.appendChild(line);
+    }
+
+    form.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const command = input.value.trim().toLowerCase();
+
+        if (!command) return;
+
+        printLine("iloo@orbit:~$ " + command, "command");
+
+        input.value = "";
+
+        if (command === "clear") {
+            output.replaceChildren();
+            return;
+        }
+
+        if (commands[command]) {
+            const result = commands[command]();
+
+            result.forEach(([text, type]) => {
+                printLine(text, type);
+            });
+
+        } else {
+            printLine(
+                "Command not found: " + command,
+                "pink"
+            );
+
+            printLine(
+                "Type 'help' to see available commands.",
+                "muted"
+            );
+        }
+
+        output.scrollTop = output.scrollHeight;
+    });
+
+})();

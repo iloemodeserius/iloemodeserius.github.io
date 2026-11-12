@@ -243,3 +243,183 @@ footer{padding:32px 6%;display:flex;justify-content:space-between;gap:15px;flex-
   .journey,.shell-sec{padding:90px 6%}
   .shell{font-size:12px}
 }
+
+/* =================================================
+   SPRAY MODE (HP / TOUCH)
+================================================= */
+.pal #mode{display:none}
+.hero.spray-on{touch-action:none}
+@media(hover:none){
+  .pal #mode{display:inline-block;border-color:var(--yellow);color:var(--yellow)}
+}
+.pal #mode.on{background:var(--yellow);color:var(--ink);border-color:var(--yellow)}
+
+/* =========================================
+   ILOO — ORBIT INTERACTIVE TERMINAL
+========================================= */
+
+.orbit-terminal-sec {
+    position: relative;
+    overflow: hidden;
+    padding: 110px 8%;
+    background:
+        radial-gradient(ellipse at 10% 20%, rgba(255,54,166,.13), transparent 40%),
+        radial-gradient(ellipse at 90% 80%, rgba(101,217,255,.12), transparent 40%),
+        #10101D;
+}
+
+.orbit-description {
+    color: #AAAAAA;
+    margin: 15px 0 35px;
+    max-width: 550px;
+    line-height: 1.7;
+}
+
+.orbit-terminal {
+    position: relative;
+    max-width: 850px;
+    margin: 0 auto;
+    background: #171326;
+    border: 2px solid #65D9FF;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow:
+        8px 8px 0 #FF36A6,
+        0 0 35px rgba(101,217,255,.15);
+}
+
+.orbit-bar {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 16px 20px;
+    background: #252039;
+    border-bottom: 2px solid #65D9FF;
+    color: white;
+    font-family: monospace;
+    font-size: 12px;
+}
+
+.orbit-lights {
+    display: flex;
+    gap: 7px;
+}
+
+.orbit-lights i {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: #FF36A6;
+}
+
+.orbit-lights i:nth-child(2) {
+    background: #FFE500;
+}
+
+.orbit-lights i:nth-child(3) {
+    background: #65D9FF;
+}
+
+.orbit-status {
+    margin-left: auto;
+    color: #65D9FF;
+}
+
+.orbit-output {
+    min-height: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 25px;
+    color: #EAE7FF;
+    font-family: monospace;
+    font-size: 14px;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+}
+
+.orbit-output p {
+    margin: 4px 0;
+}
+
+.terminal-muted {
+    color: #85809B;
+}
+
+.terminal-yellow {
+    color: #FFE500;
+    font-weight: bold;
+}
+
+.terminal-pink {
+    color: #FF36A6;
+    font-weight: bold;
+}
+
+.terminal-blue {
+    color: #65D9FF;
+    font-weight: bold;
+}
+
+.terminal-command {
+    color: #9B6DFF;
+}
+
+.orbit-input {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 25px;
+    border-top: 1px solid #38304F;
+    font-family: monospace;
+    color: #FF36A6;
+}
+
+.orbit-input input {
+    flex: 1;
+    min-width: 0;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #FFE500;
+    font-family: monospace;
+    font-size: 14px;
+}
+
+.orbit-input input::placeholder {
+    color: #777187;
+}
+
+.orbit-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 12px 20px;
+    background: #252039;
+    color: #85809B;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 600px) {
+    .orbit-terminal-sec {
+        padding: 75px 6%;
+    }
+
+    .orbit-terminal {
+        box-shadow: 4px 4px 0 #FF36A6;
+    }
+
+    .orbit-output {
+        padding: 18px;
+        font-size: 12px;
+    }
+
+    .orbit-input {
+        padding: 15px;
+        gap: 8px;
+    }
+
+    .orbit-input input {
+        font-size: 12px;
+    }
+}
